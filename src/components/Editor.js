@@ -6,7 +6,6 @@ const Editor = ({ editValue, setEditValue }) => {
       value={editValue}
       onChange={e => {
         setEditValue(e.target.value);
-        console.log(e.target.value);
       }}
     ></textarea>
   );
