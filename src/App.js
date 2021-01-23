@@ -5,11 +5,23 @@
 // User Story #6: When my markdown previewer first loads, the default markdown in the #editor field should be rendered as HTML in the #preview element.
 // Optional Bonus (you do not need to make this test pass): My markdown previewer interprets carriage returns and renders them as br (line break) elements.
 
+import Header from './components/Header';
+
 function App() {
   return (
     <div className='App'>
-      <textarea id='editor'>Textarea</textarea>
-      <div id='preview'>Preview</div>
+      <Header />
+      <textarea
+        className='editor'
+        id='editor'
+        value='text goes here'
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
+      ></textarea>
+      <div className='preview' id='preview'>
+        Preview
+      </div>
     </div>
   );
 }

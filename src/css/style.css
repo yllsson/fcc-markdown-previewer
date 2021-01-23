@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  background-color: #f8f6f2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 30px;
+}
+
+.editor {
+  height: 20rem;
+  width: 50rem;
+}
+
+.preview {
+  border: 1px solid #333;
+  height: 50rem;
+  width: 50rem;
+  background-color: #fff;
+}
