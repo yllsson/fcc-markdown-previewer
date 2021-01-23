@@ -4,9 +4,7 @@ const Editor = ({ editValue, setEditValue }) => {
       className='editor'
       id='editor'
       value={editValue}
-      onChange={e => {
-        setEditValue(e.target.value);
-      }}
+      onChange={e => setEditValue(e.target.value)}
     ></textarea>
   );
 };
