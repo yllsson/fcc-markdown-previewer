@@ -5,23 +5,19 @@
 // User Story #6: When my markdown previewer first loads, the default markdown in the #editor field should be rendered as HTML in the #preview element.
 // Optional Bonus (you do not need to make this test pass): My markdown previewer interprets carriage returns and renders them as br (line break) elements.
 
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
+import Editor from './components/Editor';
+import Preview from './components/Preview';
 
 function App() {
+  const [editValue, setEditValue] = useState('Try writing something!');
+
   return (
     <div className='App'>
       <Header />
-      <textarea
-        className='editor'
-        id='editor'
-        value='text goes here'
-        onChange={(e) => {
-          console.log(e.target.value);
-        }}
-      ></textarea>
-      <div className='preview' id='preview'>
-        Preview
-      </div>
+      <Editor editValue={editValue} setEditValue={setEditValue} />
+      <Preview editValue={editValue} setEditValue={setEditValue} />
     </div>
   );
 }

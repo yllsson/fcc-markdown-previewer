@@ -1,5 +1,9 @@
 const Header = () => {
-  return <h1 className='header'>Welcome to my Markdown Previewer!</h1>;
+  return (
+    <div className='header'>
+      <h1>Welcome to my Markdown Previewer!</h1>
+    </div>
+  );
 };
 
 export default Header;
