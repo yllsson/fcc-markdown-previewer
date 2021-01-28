@@ -1,8 +1,6 @@
-const Preview = ({ editValue, setEditValue }) => {
+const Preview = ({ editValue, setEditValue, html, setHtml }) => {
   return (
-    <div className='preview' id='preview'>
-      {editValue}
-    </div>
+    <div className='preview' id='preview' dangerouslySetInnerHTML={html}></div>
   );
 };
 

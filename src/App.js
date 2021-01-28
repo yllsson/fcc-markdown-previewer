@@ -11,18 +11,31 @@ import Editor from './components/Editor';
 import Preview from './components/Preview';
 
 function App() {
-  const [editValue, setEditValue] = useState('Try writing something!');
   const marked = require('marked');
+  const [editValue, setEditValue] = useState(
+    marked('# Marked in Node.js\n\nRendered by **marked**.')
+  );
   const [html, setHtml] = useState({
-    __html: marked('# Marked in Node.js\n\nRendered by **marked**.')
+    __html: editValue
   });
 
   return (
     <div className='App'>
       <div dangerouslySetInnerHTML={html}></div>
       <Header />
-      <Editor editValue={editValue} setEditValue={setEditValue} />
-      <Preview editValue={editValue} setEditValue={setEditValue} />
+      <Editor
+        marked={marked}
+        editValue={editValue}
+        setEditValue={setEditValue}
+        html={html}
+        setHtml={setHtml}
+      />
+      <Preview
+        editValue={editValue}
+        setEditValue={setEditValue}
+        html={html}
+        setHtml={setHtml}
+      />
     </div>
   );
 }

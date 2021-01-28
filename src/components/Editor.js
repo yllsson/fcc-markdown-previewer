@@ -1,10 +1,10 @@
-const Editor = ({ editValue, setEditValue }) => {
+const Editor = ({ editValue, setEditValue, html, setHtml, marked }) => {
   return (
     <textarea
       className='editor'
       id='editor'
-      value={editValue}
-      onChange={e => setEditValue(e.target.value)}
+      value={marked(editValue)}
+      onChange={e => setEditValue(marked(e.target.value))}
     ></textarea>
   );
 };
