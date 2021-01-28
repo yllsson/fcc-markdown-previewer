@@ -12,9 +12,17 @@ import Preview from './components/Preview';
 
 function App() {
   const [editValue, setEditValue] = useState('Try writing something!');
+  const marked = require('marked');
+  // const markedHtml = () => {
+  //   return ;
+  // };
+  const [html, setHtml] = useState({
+    __html: marked('# Marked in Node.js\n\nRendered by **marked**.')
+  });
 
   return (
     <div className='App'>
+      <div dangerouslySetInnerHTML={html}></div>
       <Header />
       <Editor editValue={editValue} setEditValue={setEditValue} />
       <Preview editValue={editValue} setEditValue={setEditValue} />
