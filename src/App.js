@@ -13,9 +13,6 @@ import Preview from './components/Preview';
 function App() {
   const [editValue, setEditValue] = useState('Try writing something!');
   const marked = require('marked');
-  // const markedHtml = () => {
-  //   return ;
-  // };
   const [html, setHtml] = useState({
     __html: marked('# Marked in Node.js\n\nRendered by **marked**.')
   });
