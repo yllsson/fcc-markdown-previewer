@@ -1,6 +1,10 @@
-const Preview = ({ editValue, setEditValue, html, setHtml }) => {
+const Preview = ({ editValue }) => {
   return (
-    <div className='preview' id='preview' dangerouslySetInnerHTML={html}></div>
+    <div
+      className='preview'
+      id='preview'
+      dangerouslySetInnerHTML={{ __html: editValue }}
+    ></div>
   );
 };
 
