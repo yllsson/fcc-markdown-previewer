@@ -7,7 +7,7 @@ const Editor = ({ editValue, setEditValue, marked }) => {
       id='editor'
       value={editValue}
       onChange={e => {
-        setEditValue(marked.parseInline(e.target.value));
+        setEditValue(e.target.value);
       }}
     ></textarea>
   );

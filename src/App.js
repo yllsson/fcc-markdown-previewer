@@ -22,7 +22,7 @@ function App() {
         editValue={editValue}
         setEditValue={setEditValue}
       />
-      <Preview editValue={editValue} />
+      <Preview marked={marked} editValue={editValue} />
     </div>
   );
 }
