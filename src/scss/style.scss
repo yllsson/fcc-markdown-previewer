@@ -21,7 +21,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .header {
@@ -32,7 +31,7 @@ body {
 }
 
 .editor {
-  height: 20rem;
+  min-height: 20rem;
   width: 50rem;
   margin: 1rem;
   padding: 1rem;
@@ -41,8 +40,20 @@ body {
 .preview {
   background-color: #fff;
   border: 1px solid #333;
-  height: 50rem;
+  min-height: 50rem;
   width: 50rem;
   margin: 1rem;
   padding: 1rem;
+}
+
+.preview img {
+  width: 50%;
+}
+
+code {
+  background-color: rgba(230, 230, 230, 0.9);
+}
+
+pre {
+  white-space: pre-wrap;
 }

@@ -1,8 +1,6 @@
+// the Marked library: https://cdnjs.com/libraries/marked).
+
 // fcc stories still to be fulfilled
-// User Story #3: When I enter text into the #editor element, the #preview element is updated as I type to display the content of the textarea.
-// User Story #4: When I enter GitHub flavored markdown into the #editor element, the text is rendered as HTML in the #preview element as I type (HINT: You don't need to parse Markdown yourself - you can import the Marked library for this: https://cdnjs.com/libraries/marked).
-// User Story #5: When my markdown previewer first loads, the default text in the #editor field should contain valid markdown that represents at least one of each of the following elements: a header (H1 size), a sub header (H2 size), a link, inline code, a code block, a list item, a blockquote, an image, and bolded text.
-// User Story #6: When my markdown previewer first loads, the default markdown in the #editor field should be rendered as HTML in the #preview element.
 // Optional Bonus (you do not need to make this test pass): My markdown previewer interprets carriage returns and renders them as br (line break) elements.
 
 import React, { useState, useEffect } from 'react';
@@ -12,7 +10,28 @@ import Preview from './components/Preview';
 
 function App() {
   const marked = require('marked');
-  const [editValue, setEditValue] = useState('');
+  const initialText = `# a header (H1 size)
+  
+## a sub header (H2 size)
+  
+[a link](https://twitter.com/home)
+
+\`inline code\` 
+
+\`\`\`
+a code block 
+var text = "Hello World!"
+console.log(text)
+\`\`\`
+
+- a list item
+
+> a blockquote 
+
+![alt text](https://images.unsplash.com/photo-1589656966895-2f33e7653819?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80 "A waving polar bear")
+
+**and bolded text**`;
+  const [editValue, setEditValue] = useState(initialText);
 
   return (
     <div className='App'>
