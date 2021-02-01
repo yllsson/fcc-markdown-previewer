@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const Editor = ({ editValue, setEditValue, marked }) => {
   return (
     <textarea
-      className='editor'
+      className='window editor'
       id='editor'
       value={editValue}
       onChange={e => {

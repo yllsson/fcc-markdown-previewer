@@ -36,12 +36,14 @@ console.log(text)
   return (
     <div className='App'>
       <Header />
-      <Editor
-        marked={marked}
-        editValue={editValue}
-        setEditValue={setEditValue}
-      />
-      <Preview marked={marked} editValue={editValue} />
+      <main className='container'>
+        <Editor
+          marked={marked}
+          editValue={editValue}
+          setEditValue={setEditValue}
+        />
+        <Preview marked={marked} editValue={editValue} />
+      </main>
     </div>
   );
 }
