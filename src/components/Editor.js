@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
-
-const Editor = ({ editValue, setEditValue, marked }) => {
+const Editor = ({ editValue, setEditValue }) => {
   return (
     <textarea
       className='window editor'

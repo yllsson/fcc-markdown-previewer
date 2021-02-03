@@ -3,13 +3,16 @@
 // fcc stories still to be fulfilled
 // Optional Bonus (you do not need to make this test pass): My markdown previewer interprets carriage returns and renders them as br (line break) elements.
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Editor from './components/Editor';
 import Preview from './components/Preview';
 
 function App() {
   const marked = require('marked');
+  marked.setOptions({
+    breaks: true
+  });
   const initialText = `# a header (H1 size)
   
 ## a sub header (H2 size)
@@ -33,6 +36,7 @@ console.log(text)
 **and bolded text**`;
   const [editValue, setEditValue] = useState(initialText);
 
+  console.log(marked(editValue));
   return (
     <div className='App'>
       <Header />

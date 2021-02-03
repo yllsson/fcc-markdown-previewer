@@ -48,6 +48,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  padding: 0 3rem;
 }
 
 .window {
@@ -69,7 +70,7 @@ body {
 .preview {
   background-color: #fff;
   border: 1px solid #333;
-  max-height: 80vh;
+  // max-height: 80vh;
   flex: 1;
   align-self: stretch;
   overflow: auto;
@@ -79,6 +80,9 @@ body {
 
   code {
     background-color: rgba(230, 230, 230, 0.9);
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    display: inline-block;
   }
 
   ul li,
@@ -92,5 +96,10 @@ body {
 
   pre {
     white-space: pre-wrap;
+  }
+
+  pre code {
+    padding: 1em;
+    display: inline-block;
   }
 }

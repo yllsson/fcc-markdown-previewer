@@ -3,7 +3,7 @@ const Preview = ({ editValue, marked }) => {
     <div
       className='window preview'
       id='preview'
-      dangerouslySetInnerHTML={{ __html: marked(editValue) }}
+      dangerouslySetInnerHTML={{ __html: marked(editValue, { breaks: true }) }}
     ></div>
   );
 };
