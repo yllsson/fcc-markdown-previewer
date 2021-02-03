@@ -63,6 +63,7 @@ body {
 .preview {
   background-color: #fff;
   border: 1px solid #333;
+  max-height: 80vh;
   flex: 1;
   align-self: stretch;
   overflow: auto;

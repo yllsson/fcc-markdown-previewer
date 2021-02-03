@@ -13,27 +13,66 @@ function App() {
   marked.setOptions({
     breaks: true
   });
-  const initialText = `# a header (H1 size)
-  
-## a sub header (H2 size)
-  
-[a link](https://twitter.com/home)
 
-\`inline code\` 
+  const initialText = `
+Here's how to use this previewer:
+===========================
+<br>
 
+The hash symbols create headers according to the amount of symbols:
+# H1 
+## H2 
+### H3 
+#### H4
+##### H5
+###### H6 is the max
+<br>
+
+#### This is how you add a link
+
+You add your [text within the brackets](https://google.com/) and your url within the parentheses. 
+This particular one leads to google. :)
+<br>
+
+#### This is how you add inline code
+Put the code within backticks: \`console.log("Hello World")\` 
+<br>
+
+#### This is how you add a full block of code
+If you want a full block of code you use 3 backticks before and after your block.
 \`\`\`
-a code block 
 var text = "Hello World!"
 console.log(text)
 \`\`\`
+<br>
 
+#### This is how you add an unordered list
 - a list item
+- another list item
+- a third list item
 
+<br>
+
+#### This is how you add an ordered list
+1. a list item
+2. another list item
+3. a third list item
+
+<br>
+
+#### This is how you add a blockquote 
 > a blockquote 
+> more lines of the quote
+> it's not a very lengthy quote
+<br>
 
+#### This is how you add an image
 ![alt text](https://images.unsplash.com/photo-1589656966895-2f33e7653819?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80 "A waving polar bear")
+<br>
 
-**and bolded text**`;
+#### And last but not least
+You add *cursive text* using one asterisk on each side of the text and **bolded text** using two asterisks.`;
+
   const [editValue, setEditValue] = useState(initialText);
 
   console.log(marked(editValue));
