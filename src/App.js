@@ -15,8 +15,7 @@ function App() {
     gfm: true
   });
 
-  const initialText = `
-##### *Write your markdown in the editor to the left and it'll show up in the previewer on the right!*
+  const initialText = `##### *Write your markdown in the editor to the left and it'll show up in the previewer on the right!*
 
 <br>
 
@@ -83,8 +82,7 @@ While an ordered list is created by writing numbers
 You add *cursive text* using one asterisk on each side of the selection and **bolded text** using two asterisks.
 <br>
 
-## Now it's your turn! Go on - give it a go!
-`;
+## Now it's your turn! Go on - give it a go!`;
 
   const [editValue, setEditValue] = useState(initialText);
 
