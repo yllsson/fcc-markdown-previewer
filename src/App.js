@@ -15,11 +15,7 @@ function App() {
     gfm: true
   });
 
-  const initialText = `##### *Write your markdown in the editor to the left and it'll show up in the previewer on the right!*
-
-<br>
-
-Here are some of the things you can do:
+  const initialText = `Here are some of the things you can do:
 =====
 <br>
 
